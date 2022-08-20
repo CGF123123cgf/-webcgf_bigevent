@@ -2,3 +2,19 @@ layui 布局的插件
 1 新建登录页面和注册页面初始化
 2, github管理项目
 可打开VSCode里的终端运行git命令
+  先维护本地项目仓库  
+  git init   初始化本地git 仓库
+  git add .  把修改或没修改的都一下子提交到暂存区
+  git commit -m '写修改提交的消息'   提交到 本地仓库
+
+  创建远程git仓库  之后要把本地仓库和远程仓库链接起来 并且把本地仓库的代码push到远程仓库
+  ssh:连接两个仓库 git remote add origin git@github.com:CGF123123cgf/-webcgf_bigevent.git
+  给Master分支改名为main 
+  git branch -M main 
+  <!-- 把代码发送到远程仓库中 main分支 -->
+  git push -u origin main
+  git checkout -b login  在本地创建一个login分支并切换到login分支
+ 3 file协议 不好 开发的时候 ，所以安装啦一个live sever 这样打开的网页就是http协议的了
+  html页面右击open live server  右下角可停掉live server
+
+  4.大事件项目备用接口：http://api-breakingnews-web.itheima.net/

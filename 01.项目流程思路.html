@@ -9,17 +9,38 @@ layui 布局的插件
   git commit -m '写修改提交的消息'   提交到 本地仓库
 
   创建远程git仓库  之后要把本地仓库和远程仓库链接起来 并且把本地仓库的代码push到远程仓库
-  ssh:连接两个仓库 git remote add origin git@github.com:CGF123123cgf/-webcgf_bigevent.git
+  ssh:连接两个仓库 git remote add origin git@github.com:cheng-gangfeng/-webcgf_bigevent.git
   给Master分支改名为main 
   git branch -M main 
   <!-- 把代码发送到远程仓库中 main分支 -->
   git push -u origin main
-  git checkout -b login  在本地创建一个login分支并切换到login分支
+  git checkout -b login  在本地创建一个login分支并切换到login分支 
+  
+  在login 分支写代码 
+  写完之后
+  更新本地仓库代码
+  git add .
+  git commit -m ''
+
+  git push -u origin login  把本地分支发送到远端分支 （当远端没有这个分支的时候）
+  有分支就 git push
+
+  切换到主分支 合并login分支
+  git checkout main 
+  git merge login
+  git push  在这里是更新远程主分支
+
+接着创建 主页的分支 重复上述步骤。
+ 在当前分支创建并切换到index分支
+ git checkout -b index
+
+ git branch 查看当前分支
+
  3 file协议 不好 开发的时候 ，所以安装啦一个live sever 这样打开的网页就是http协议的了
   html页面右击open live server  右下角可停掉live server
-  git push -u origin login  把本地分支发送到远端分支 （当远端没有这个分支的时候）
   
-
+  <!-- 更新仓库地址 -->
+  git remote set-url origin git@github.com:cheng-gangfeng/-webcgf_bigevent.git
   4.大事件项目备用接口：http://api-breakingnews-web.itheima.net/
   项目登录与注册功能
   绘制login页面的基本结构
